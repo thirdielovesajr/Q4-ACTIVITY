@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Computation Example</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+      body {
+        padding: 30px;
+      }
+      h1 {
+        margin-bottom: 20px;
+      }
+      #output {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Computation Example</h1>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Computed Values:</h5>
+          <div id="output"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let firstNumber = 10;
+      let secondNumber = 5;
+      let sum = firstNumber + secondNumber;
+      let difference = firstNumber - secondNumber;
+      let product = firstNumber * secondNumber;
+      let quotient = firstNumber / secondNumber;
+      let modulus = firstNumber % secondNumber;
+      let outputDiv = document.getElementById("output");
+      outputDiv.innerHTML = "<p><strong>Sum:</strong> " + sum + "</p>" +
+                             "<p><strong>Difference:</strong> " + difference + "</p>" +
+                             "<p><strong>Product:</strong> " + product + "</p>" +
+                             "<p><strong>Quotient:</strong> " + quotient + "</p>" +
+                             "<p><strong>Modulus:</strong> " + modulus + "</p>";
+    </script>
+  </body>
+</html>
