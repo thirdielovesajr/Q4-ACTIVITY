@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Activity 3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .container {
+            margin-top: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Kilograms to Pounds Converter</h2>
+        <form>
+            <div class="form-group">
+                <label for="K">Enter Kilograms:</label>
+                <input type="text" class="form-control" id="K" size="6">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="Calculate()">Calculate</button>
+            <button type="reset" class="btn btn-secondary">Cancel</button>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        function Calculate() {
+            let K = document.getElementById('K').value;
+            let P = 2.2 * K;
+            alert("The amount of pounds is: " + P);
+        }
+    </script>
+
+    
+    <script></script>
+</body>
+</html>
