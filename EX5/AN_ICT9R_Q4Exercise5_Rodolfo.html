@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<style type="text/css">
+		img {
+			height: 550px;
+			width: 550px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.container {
+			margin-top: 20px;
+		}
+
+		h2 {
+			text-align: center;
+			color: #337ab7;
+		}
+
+		p {
+			color: #555;
+			text-align: justify;
+		}
+
+		.row {
+			margin-top: 20px;
+		}
+
+		#bulb {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 20px;
+		}
+
+		a {
+			color: #337ab7;
+		}
+	</style>
+	<title>Q4 Exercise 5</title>
+</head>
+<body>
+	<div class="container">
+		<h2>Ohm's Law</h2>
+		<p>Ohm's Law describes the way current flows through a material when different levels of voltage are applied. Some materials like electrical wires present little resistance to the current flow, and this type of material is called a conductor. Hence, if this conductor is placed directly across a battery, for example, a lot of current would flow.</p>
+		<br>
+		<img src="https://www.allaboutcircuits.com/uploads/articles/current-flow-ohms-law.jpg">
+		<br>
+		<p>To help remember the formula, it is possible to use a triangle with one side horizontal and the peak at the top like a pyramid. This is sometimes known as the Ohm's Law triangle. In the top corner of the Ohm's Law triangle is the letter V, in the left-hand corner, the letter I, and in the right-hand bottom corner, R.</p>
+		<br>
+		<img src="https://cdn1.vogel.de/cKtyI2iVXgNuUQ5g-2FwcVh5j_g=/fit-in/1000x0/p7i.vogel.de/wcms/7a/b7/7ab74af9e7d6240484e656199310cda4/0109446089.jpeg">
+	</div>
+	<div class="row">
+		<div class="col-6">
+			Enter Voltage (E): <input type="text" id="V" class="form-control">
+			Enter Resistance (R): <input type="text" id="R" class="form-control">
+			<input type="Submit" value="COMPUTE" class="btn btn-success" onclick="Calculate()">
+			<p id="OUTPUT"></p>
+		</div>
+		<div class="col-6">
+			<img src="https://www.allaboutcircuits.com/uploads/articles/current-flow-ER.jpg" id="figure 2">
+					</div>
+	</div>
+	<audio id="audio1" src="electric-hum.mp3"></audio>
+	<div class="container">
+		<h2>What makes a light bulb light up</h2>
+		<p>The typical incandescent light bulb contains a thin wire (usually tungsten) called a filament that has a high electrical resistance. This filament gets very hot when an electric current passes through it. The intense temperature makes the filament glow brightly.</p>
+		<img src="turnoff.png" id="bulb">
+		<br>
+		<button class="btn btn-success" onmouseover="On()" onmouseout="Off()">TURN ON LIGHT</button>
+		<br><br>
+	</div>
+
+	<script type="text/javascript">
+		function Calculate() {
+			let V = document.getElementById('V').value;
+			let R = document.getElementById('R').value;
+			let Current = V / R;
+			document.getElementById('OUTPUT').innerHTML = "The computed current (I) is: " + Current;
+		}
+
+		function On() {
+			document.getElementById('bulb').src = "turnon.png";
+			document.getElementById('audio1').play();
+		}
+
+		function Off() {
+			document.getElementById('bulb').src = "turnoff.png";
+			document.getElementById('audio1').pause();
+		}
+	</script>
+
+	<div class="container">
+		<br>
+		<h4>SOURCES:</h4>
+		<a href="https://www.electronics-notes.com/articles/basic_concepts/resistance/what-is-ohms-law-formula-equation.php">Understanding Ohm's law</a>
+	</div>
+
+</body>
+</html>
+
+	
